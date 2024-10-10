@@ -1,0 +1,246 @@
+# the sample data herein was generated with the llama3.1 8bit model using ollama
+
+contact:
+    name: John Q. Candidate
+    address:
+        number: 314
+        street: Pi Street
+        city: Denver
+        state: CO
+        zip: 80205
+        country: USA
+    mobile: (619) 867-5309
+    email: hireme@johnqcandidate.name
+    website: https://johnqcandidate.name
+    linkedin: john-q-candidate
+    gitlab: john-q-candidate
+    github: john-q-candidate
+    tagline: "Software engineer and binary wizard"
+
+about: >
+    I'm a seasoned DevOps whisperer, fluent in the lingua franca of containerization (Kubernetes, Docker), microservices, and cloud-agnostic deployment strategies. When I'm not 
+    optimizing code for maximum concurrency or wrangling a team of junior engineers to get their git pulls straight, you can find me evangelizing the gospel of Agile methodologies or 
+    sipping on a craft IPA at the latest hipster brewery in Palo Alto. My sweet spot is where scalability meets innovation – think serverless architectures, data science-driven product 
+    development, and 'oh-so-2023' buzzwords like low-code no-code and API-first everything. If you're looking for someone to lead your team through a DevOps transformation or simply need 
+    a partner in crime to build that next-gen app with a killer UX, let's grab a ride-share and discuss the finer points of event-driven programming over a 
+    plate of artisanal avocado toast. Just don't @ me.
+
+experience:
+    -
+        title: Principal & Owner
+        company: Beep Boop Consulting, LLC
+        site: https://beepboophq.com/
+        from: 2020-08
+        to: 
+        description: >
+            Owning and leading a team of software engineers to build and maintain a scalable, high-performance, and
+            fault-tolerant web application using Go, Java, and Python.
+        location: Denver, CO (remote)
+
+    -
+        title: Senior Software Engineer
+        company: Google Cloud Platform
+        site: https://cloud.google.com/
+        from: 2018-03
+        to: 2020-08
+        description: >
+            Collaborated with cross-functional teams to design and implement scalable cloud-based systems using Go,
+            Java, and Python. Utilized Kubernetes, Docker, and Terraform for containerization and infrastructure as code. Mentored junior engineers on software development best practices.            
+        location: San Francisco, CA
+  
+    -
+        title: Staff Software Engineer
+        company: LinkedIn (Microsoft)
+        site: https://linkedin.com/
+        from: 2015-03
+        to: 2018-03
+        description: >
+            Led the development of a high-performance, low-latency data pipeline using Scala, Apache Kafka, and 
+            Cassandra. Optimized database queries for improved performance and reduced latency. Collaborated with product managers to design and implement features.
+        location: Sunnyvale, CA
+  
+    -
+        title: Software Engineer
+        company: Airbnb (Start-up)
+        site: https://airbnb.com/
+        from: 2013-03
+        to: 2015-03
+        description: >
+            Participated in the development of a scalable and fault-tolerant web application using Ruby on Rails, 
+            React, and PostgreSQL. Contributed to the implementation of real-time features and optimized database queries for improved performance.
+        location: San Francisco, CA
+  
+    -
+        title: Junior Software Engineer
+        company: VMware (Intern)
+        site: https://vmware.com/
+        from: 2012-06
+        to: 2013-03
+        description: >
+            Assisted in the development of a cloud-based storage system using Java and Spring Framework. Gained 
+            experience with version control systems like Git and Subversion.
+        location: Palo Alto, CA
+            
+# where'd you get your foundational knowledge?
+education:
+    -
+        title: Master of Science in Computer Science (M.S.)
+        company: Stanford University
+        site: https://www.cs.stanford.edu/
+        from: 2014-09-01
+        to: 2016-06-30
+        location: Stanford, CA
+        skills:
+            - Artificial Intelligence and Machine Learning
+            - Computer Vision and Image Processing
+            - Natural Language Processing
+
+    -
+        title: Bachelor of Science in Computer Science (B.S.)
+        company: University of Colorado Boulder
+        site: https://www.colorado.edu/computer-science/
+        from: 2010-09-01
+        to: 2014-06-30
+        location: Boulder, CO
+        skills:
+            - Data Structures and Algorithms (C, C++)
+            - Computer Systems and Networks
+            - Human-Computer Interaction
+
+
+# our working skillsets shift over time and between engagements. these are the 
+# skills that are loaded in L1 _right now_.
+topSkills:
+    - Java
+    - Spring
+    - RESTful APIs
+    - Team Building
+    - Distributed Systems
+    - Business Process Automation
+
+# Keywords to get around arbitrarily-chosen skills lists created by 
+# HR, to the chagrin of hiring managers whom don't know why they're not
+# getting any candidates sent their way. If you notice this and think it's
+# a problem, please understand that I'm simply playing the game of trying
+# to speak to a human rather than being weeded out by a poorly configured 
+# ATS. I don't apply to jobs for which I do not possess the skills required
+# to be successful.
+atsSkills:
+  - Algorithm design
+  - Architecture patterns
+  - Agile methodologies
+  - Amazon Web Services (AWS)
+  - Android development
+  - Apple ecosystem knowledge
+  - ASP.NET
+  - Azure
+  - C++
+  - Cloud computing
+  - Code review tools (e.g. GitHub, GitLab)
+  - Compilers
+  - Computer vision
+  - Containerization (Docker)
+  - Continuous Integration (CI)/Continuous Deployment (CD)
+  - Cryptography
+  - Data analysis
+  - Data science
+  - Database design
+  - Design patterns
+  - DevOps practices
+  - Distributed systems
+  - Embedded systems programming
+  - Extreme Programming (XP)
+  - Front-end development (React, Angular, Vue.js)
+  - Functional programming
+  - Game development
+  - Git version control
+  - GPU programming
+  - GUI design tools (e.g. Sketch, Figma)
+  - Hardware understanding
+  - Hyperscale infrastructure experience
+  - Image processing
+  - Information theory
+  - Internet of Things (IoT) development
+  - Java
+  - Jenkins
+  - Kubernetes
+  - Linux system administration
+  - Machine learning
+  - Microservices architecture
+  - Mobile app development
+  - MongoDB
+  - PostgreSQL
+  - MySQL
+  - Neural networks
+  - Network protocols
+  - Networking fundamentals
+  - NoSQL databases
+  - Object-oriented programming
+  - Operating System internals
+  - Parallel computing
+  - Performance optimization
+  - Physics engines
+  - Pluralsight
+  - Product management
+  - Programming languages (C#, Java, Python, etc.)
+  - Quality assurance testing
+  - RESTful APIs
+  - Rich internet applications
+  - Ruby on Rails
+  - Scalability and performance tuning
+  - Scrum mastery
+  - Security best practices
+  - Secure coding
+  - Simulation software experience
+  - Software architecture
+  - Software design principles
+  - Solidity programming
+  - Source control systems
+  - System administration
+  - System integration
+  - Technical writing
+  - Testing frameworks
+  - Unit testing
+  - User interface (UI) design
+  - Version control systems
+  - Web development
+  - Web security
+  - Web services
+  - Windows system administration
+  - XML/XSLT
+  - Artificial intelligence (AI)
+  - Blockchain
+  - Cloud migration
+  - Cybersecurity
+  - Data warehousing
+  - Digital transformation
+  - Edge computing
+  - Enterprise architecture
+  - High-performance computing
+  - Human-computer interaction
+  - Internet of Things (IoT)
+  - Machine learning engineering
+  - Microservices development
+  - Natural language processing (NLP)
+  - Operating system development
+  - Parallel programming
+  - Predictive analytics
+  - Quantitative trading
+  - Real-time systems
+  - Recommendation engines
+  - Search engine optimization (SEO)
+  - Service-oriented architecture (SOA)
+  - Social media analysis
+  - Technical evangelism
+  - Virtual reality (VR) and augmented reality (AR)
+  - Visual design tools
+
+
+hobbies: |
+    When not saving the world with code, I enjoy engaging in a variety of extremely nerdy hobbies that hone my problem-solving skills and demonstrate my unwavering dedication to all 
+    things technical. I'm an avid contributor to the open-source game, "NetHack," where I've submitted numerous patches to improve game mechanics and fix bugs. In my free time, I also 
+    enjoy participating in 24-hour hackathons, where I compete with fellow coders to build innovative solutions to real-world problems (bonus points if they involve robots or drones). 
+    Additionally, I'm a proud owner of a retro-computer collection, featuring systems like the Commodore 64 and Apple II, which I've lovingly restored to their former glory. And, for 
+    sheer fun, I participate in online "speedcubing" competitions, where I attempt to solve 3D Rubik's Cubes as quickly as possible (my personal best is 10.2 seconds - not bad for a 
+    human!). These hobbies may seem obscure, but they showcase my passion for learning, creativity, and collaboration - essential skills for any software engineer looking to take their 
+    craft to the next level.
