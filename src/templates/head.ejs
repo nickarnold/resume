@@ -1,0 +1,13 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<title><%= contact.name %>'s Resume</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+<style><%- styles %></style>
+<script>
+    // hack to get fonts to render properly for pdf output
+    // see: https://stackoverflow.com/questions/76499802/playwright-chromium-doesnt-load-fonts-in-production
+    document.addEventListener('DOMContentLoaded', async () => await document.fonts.ready);
+</script>

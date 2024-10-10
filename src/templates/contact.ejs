@@ -1,0 +1,71 @@
+<section>
+	<div class="relative flex items-center">
+		<div class="flex-grow border-t border-blue-700"></div>
+		<header class="flex-shrink mx-4 font-semibold text-blue-700 uppercase">Contact</header>
+		<div class="flex-grow border-t border-blue-700"></div>
+	</div>
+	
+	<dl class="mt-4 text-sm">
+		<dt class="screen:hidden font-bold">
+			<i class="fa fa-map-marker-alt"></i>
+			Location
+		</dt>
+		<dd class="screen:hidden mb-3">
+			<%= address.city %>, <%= address.state %>, <%= address.country %>
+		</dd>
+			
+		<dt class="font-bold">
+			<i class="fas fa-envelope"></i>
+			Email
+		</dt>
+		<dd class="mb-3">
+			<a href="mailto:<%= email %>"><%= email %></a>
+		</dd>
+
+		<dt class="font-bold">
+			<i class="fas fa-mobile-alt"></i>
+			Mobile phone
+		</dt>
+		<dd class="mb-3">
+			<a href="tel:<%= mobile.replace(/\s/g, '') %>"><%= mobile %></a>
+		</dd>
+
+		<dt class="font-bold">
+			<i class="fas fa-globe"></i>
+			Website
+		</dt>
+		<dd class="mb-3">
+			<a href="<%= website %>"><%= website.replace('https://', '') %></a>
+		</dd>
+
+		<dt class="font-bold">
+			<i class="fab fa-linkedin"></i>
+			LinkedIn
+		</dt>
+		<dd class="mb-3">
+			<a href="http://www.linkedin.com/in/<%= linkedin %>">
+				linkedin.com/in/<%= linkedin %>
+			</a>
+		</dd>
+
+		<dt class="font-bold">
+			<i class="fab fa-github"></i>
+			Github
+		</dt>
+		<dd class="mb-3">
+			<a href="https://github.com/<%= github %>">
+				github.com/<%= github %>
+			</a>
+		</dd>
+
+		<dt class="font-bold">
+			<i class="fab fa-gitlab"></i>
+			Gitlab
+		</dt>
+		<dd>
+			<a href="https://gitlab.com/<%= gitlab %>">
+				gitlab.com/<%= gitlab %>
+			</a>
+		</dd>
+	</dl>
+</section>

@@ -1,0 +1,14 @@
+<section>
+	<div class="relative">
+		<div class="absolute inset-0 flex items-center">
+		  <div class="w-full border-b border-blue-700"></div>
+		</div>
+		<div class="relative flex justify-center">
+		  <span class="bg-white px-4 font-semibold text-blue-700 uppercase">Experience</span>
+		</div>
+	</div>
+
+	<% experience.forEach(item => { %>
+		<%- include('item', item) %>
+	<% }); %>
+</section>

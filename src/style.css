@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-display: swap;
+        src: url(fonts/OpenSans-Variable.woff2) format('woff2');
+    }
+
+    a {
+        text-underline-offset: 5px;
+        @apply 
+            underline
+            decoration-2 
+            decoration-dotted 
+            decoration-blue-700;
+    }
+
+    h1 {
+        @apply text-3xl font-bold;
+    }
+
+    section > header {
+        @apply text-xl font-bold;
+    }
+
+    /* adjust for PDF printing */
+    @media print {
+        html {
+            font-size: 9px;
+        }
+        a {
+            text-underline-offset: 3px;
+            @apply decoration-1
+        }        
+    }
+}

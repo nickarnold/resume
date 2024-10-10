@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<%- include('head'); %>
+</head>
+<body>
+	<header class="flex h-20 bg-blue-700 items-center px-6 text-gray-100">
+		<h1 class="w-screen"><%= contact.name %></h1>
+
+		<span class="flex justify-end text-sm font-normal w-screen">
+			<!-- <%- include('address', contact.address)%> -->
+			<%= contact.tagline %>
+		</span>
+	</header>
+
+	<div id="content" class="flex flex-row px-6 pt-6">
+		<aside class="basis-1/5 space-y-6">
+			<%- include('contact', contact); %>
+			<%- include('about', about); %>
+			<%- include('languages', topSkills); %>
+		</aside>
+
+		<main class="basis-4/5 pl-6">
+			<%- include('experience', experience); %>
+			<%- include('education', education); %>
+			<%- include('hobbies', hobbies); %>
+		</main>
+	</div>
+
+	<!-- ATS section. Not sure if this is a good idea. Maybe remove? -->
+	<span class="text-white text-[1px]"><%= atsSkills %></span>
+
+	<footer class="print:hidden flex h-14 text-center items-center">
+		<p class="w-screen text-sm">
+			Copyright &copy; <%= datefns.format(new Date(), 'yyyy') %> 
+			<a href="<%= contact.website %>"><%= contact.name %></a>. All rights reserved.
+		</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<article class="my-2">
+	<header class="flex items-center">
+		<span class="basis-4/5 text-lg font-semibold text-blue-600">
+			<%= title %> &mdash; <a href="<%= site %>"><%= company %></a>
+		</span>
+		<div class="basis-1/5 text-xs text-right text-slate-600 italic">
+			<span>
+				<%- include('monthYear', { date: from }) %>
+					&nbsp;&ndash;
+				<% if (to) { %>
+					<%- include('monthYear', { date: to }) %>
+				<% } else { %>
+					Present
+				<% } %>
+			</span>
+			<br />
+			<% if (locals.location && location) { %>
+			<span>
+				<i class="fa fa-map-marker-alt"></i>
+				<%= location %>
+			</span>
+			<% } %>
+		</div>
+	</header>
+	
+	<div class="w-4/5">
+	<% if (locals.description) { %>
+		<p>
+			<strong>Accomplishments:</strong>
+			<%- description.replace(/\n/g, '<br>') %>
+		</p>
+	<% } %>
+
+	<% if (locals.skills) { %>
+		<p>
+			<strong>
+				<%= locals.isEducation ? 'Core courses' : 'Tech stack' %>:
+			</strong>
+			<%
+				for (const skill of skills) {
+					const isLast = skill === skills[skills.length - 1];
+			%>
+				<%= skill %><%= isLast ? '' : ',' %>
+			<% } %>
+		</p>
+	<% } %>
+	</div>
+</article>
