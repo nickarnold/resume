@@ -5,7 +5,7 @@
   "main": "build-resume.js",
   "scripts": {
     "test": "echo \"you're hired!\"",
-    "prebuild": "if [ \"$CI\" = \"true\" ]; then npx playwright install --with-deps; fi ; mkdir -p output",
+    "prebuild": "mkdir -p output",
     "build": "npm run build:styles && npm run build:all",
     "build:dev": "cp -r ./src/fonts ./output/ && npx tailwindcss -i ./src/style.css -o ./output/style.css --watch ; npm run build:html",
     "build:styles": "cp -r ./src/fonts ./output/ && npx tailwindcss -i ./src/style.css -o ./output/style.css --minify",
