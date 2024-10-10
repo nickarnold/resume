@@ -7,11 +7,6 @@ on:
       - master
       - main
 
-env:
-  DEPLOY_DIR: /var/www/nickarnold.name/
-  SSH_HOST: nickarnold.name
-  SSH_USERNAME: github
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -49,11 +44,11 @@ jobs:
         uses: appleboy/scp-action@v0.1.7
         if: ${{ success() }}
         with:
-          host: ${{ env.SSH_HOST }}
-          username: ${{ env.SSH_USERNAME}}
+          host: ${{ vars.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME}}
           key: ${{ secrets.SSH_DEPLOY_KEY }}
           source: "output/resume.pdf,output/style.css,output/fonts/*.woff2,output/resume.html"
-          target: ${{ env.DEPLOY_DIR }}
+          target: ${{ secrets.DEPLOY_DIR }}
           # this will remove the 'output' part of the source path on the target
           strip_components: 1
           overwrite: 1
