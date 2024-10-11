@@ -5,9 +5,10 @@ server using GitHub Actions. It uses [Tailwind CSS](https://tailwindcss.com/)
 for styling, and [Playwright](https://playwright.dev/) for PDF generation and 
 EJS templating in Node.js to generate the HTML.
 
-The resume data is stored in `resume-data.yml` and is rendered to HTML first, 
-before invoking Playwright to generate the PDF from the markup. GitHub Actions 
-are used to deploy the resulting HTML and PDF files to a web server using `scp`.
+The resume data is stored in `./src/resume-data.yml` and is rendered to HTML 
+first, before invoking Playwright to generate the PDF from the markup. GitHub 
+Actions are used to deploy the resulting HTML and PDF files to a web server 
+using `scp`.
 
 I find that HTML/CSS is a simpler and more approachable way to build a resume
 for most developers. If you like LaTeX, great! There are plenty of those

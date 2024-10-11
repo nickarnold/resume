@@ -10,7 +10,7 @@
         src: url(fonts/OpenSans-Variable.woff2) format('woff2');
     }
 
-    a {
+    #content a {
         text-underline-offset: 5px;
         @apply 
             underline
