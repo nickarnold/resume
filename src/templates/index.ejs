@@ -21,13 +21,16 @@
 	</header>
 
 	<div id="content" class="flex flex-row px-6 pt-6">
+
+		<!-- left column -->
 		<aside class="basis-1/5 space-y-6">
 			<%- include('contact', contact); %>
-			<%- include('about', about); %>
 			<%- include('languages', topSkills); %>
 		</aside>
 
+		<!-- right column -->
 		<main class="basis-4/5 pl-6">
+			<%- include('about', about); %>
 			<%- include('experience', experience); %>
 			<%- include('education', education); %>
 			<%- include('hobbies', hobbies); %>
