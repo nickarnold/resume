@@ -39,7 +39,9 @@ jobs:
       - name: Build resume (HTML and PDF)
         if: ${{ success() }}
         run: npm run build
-        
+        env:
+          RESUME_DATA: ${{ secrets.RESUME_DATA }}
+
       - name: Deploy to server
         uses: appleboy/scp-action@v0.1.7
         if: ${{ success() }}

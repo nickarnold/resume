@@ -20,9 +20,15 @@ const TEMPLATE_VALUES_FILE = `${__dirname}/resume-data.yml`;
         }
     });
 
-    const valuesFile = fs.readFileSync(TEMPLATE_VALUES_FILE, 'utf8');
+    // grab the resume data from the environment or the file system, in that order
+    let resumeData;
+    if (process.env.RESUME_DATA) {        
+        resumeData = yaml.parse(process.env.RESUME_DATA);
+    } else {
+        resumeData = yaml.parse(fs.readFileSync(TEMPLATE_VALUES_FILE, 'utf8'));
+    }
+
     const styles = fs.readFileSync(STYLES_FILE, 'utf8');
-    const resumeData = yaml.parse(valuesFile);
 
     // render the HTML file
     const renderedHTML = await ejs.renderFile(
