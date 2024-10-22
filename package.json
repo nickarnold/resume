@@ -7,8 +7,8 @@
     "test": "echo \"you're hired!\"",
     "prebuild": "mkdir -p output",
     "build": "npm run build:styles && npm run build:all",
-    "build:dev": "cp -r ./src/fonts ./output/ && npx tailwindcss -i ./src/style.css -o ./output/style.css --watch ; npm run build:html",
-    "build:styles": "cp -r ./src/fonts ./output/ && npx tailwindcss -i ./src/style.css -o ./output/style.css --minify",
+    "build:dev": "npx tailwindcss -i ./src/style.css -o ./output/style.css --watch ; npm run build:html",
+    "build:styles": "npx tailwindcss -i ./src/style.css -o ./output/style.css --minify",
     "build:html": "node ./src/build-resume.js --html",
     "build:all": "node ./src/build-resume.js",
     "clean": "rm -rf output"
@@ -23,7 +23,7 @@
     "url": "https://github.com/nickarnold/resume/issues"
   },
   "homepage": "https://nickarnold.name/resume",
-  "devDependencies": {    
+  "devDependencies": {
     "tailwindcss": "^3.4.11"
   },
   "dependencies": {
