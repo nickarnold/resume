@@ -117,3 +117,8 @@ topSkills:
     - Team Building
     - Distributed Systems
     - Business Process Automation
+
+analytics:
+    useCounterscale: false
+    counterscaleTrackerUrl: https://counterscale.<example>.workers.dev/tracker.js
+    counterscalePropertyId: <counterscaleSiteId>
