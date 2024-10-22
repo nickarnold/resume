@@ -4,20 +4,21 @@
 	<%- include('head'); %>
 </head>
 <body>
-	<header class="flex print:h-20 h-24 bg-blue-700 items-center px-6 text-gray-100">
-		<h1 class="w-screen font-gruppo"><%= contact.name %></h1>
+	<header class="w-screen h-24 bg-blue-700 text-center text-gray-100">
+		
+		<div class="grid h-24 place-content-center justify-items-center font-gruppo">
+			<h1><%= contact.name %></h1>
+			<h3><%= contact.tagline %></h3>
+		</div>
 
-		<!-- donwload button for PDF -->
+		<!-- PDF download button -->
 		<div class="print:hidden absolute top-1 right-1">
 			<a class="text-white bg-blue-600 hover:bg-blue-900 font-medium rounded-lg text-sm px-2 py-1 focus:outline-none" 
-				href="resume.pdf" download="Nicholas-Arnold-Resume.pdf" target="_blank">
+				href="resume.pdf" target="_blank"
+				download="<%= contact.name.replaceAll('.', '').replaceAll(' ', '_'); %>_Resume.pdf">
 				Download <i class="fa-regular fa-file-pdf"></i>
 			</a>
 		</div>
-
-		<span class="flex justify-end text-lg font-gruppo w-screen">
-			<strong><%= contact.tagline %></strong>
-		</span>
 	</header>
 
 	<div id="content" class="flex flex-row px-6 pt-6">
