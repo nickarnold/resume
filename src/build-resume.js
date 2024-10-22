@@ -52,7 +52,7 @@ const TEMPLATE_VALUES_FILE = `${__dirname}/resume-data.yml`;
         await page.setContent(renderedHTML);
         await page.pdf({
             path: `${OUTPUT_DIRECTORY}/resume.pdf`,
-            printBackground: true
+            printBackground: true,
         });
         console.log('PDF generated successfully');
         await browser.close();

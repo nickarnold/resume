@@ -10,7 +10,7 @@
 			<i class="fa fa-map-marker-alt"></i>
 			Location
 		</dt>
-		<dd class="screen:hidden mb-3">
+		<dd class="screen:hidden mb-3 font-gruppo">
 			<%= address.city %>, <%= address.state %>, <%= address.country %>
 		</dd>
 			
@@ -18,7 +18,7 @@
 			<i class="fas fa-envelope"></i>
 			Email
 		</dt>
-		<dd class="mb-3">
+		<dd class="mb-4 font-gruppo">
 			<a href="mailto:<%= email %>"><%= email %></a>
 		</dd>
 
@@ -26,7 +26,7 @@
 			<i class="fas fa-mobile-alt"></i>
 			Mobile phone
 		</dt>
-		<dd class="mb-3">
+		<dd class="mb-4 font-gruppo">
 			<a href="tel:<%= mobile.replace(/\s/g, '') %>"><%= mobile %></a>
 		</dd>
 
@@ -34,7 +34,7 @@
 			<i class="fas fa-globe"></i>
 			Website
 		</dt>
-		<dd class="mb-3">
+		<dd class="mb-4 font-gruppo">
 			<a href="<%= website %>"><%= website.replace('https://', '') %></a>
 		</dd>
 
@@ -42,8 +42,8 @@
 			<i class="fab fa-linkedin"></i>
 			LinkedIn
 		</dt>
-		<dd class="mb-3">
-			<a href="http://www.linkedin.com/in/<%= linkedin %>">
+		<dd class="mb-4 font-gruppo">
+			<a href="https://www.linkedin.com/in/<%= linkedin %>">
 				linkedin.com/in/<%= linkedin %>
 			</a>
 		</dd>
@@ -52,7 +52,7 @@
 			<i class="fab fa-github"></i>
 			Github
 		</dt>
-		<dd class="mb-3">
+		<dd class="mb-4 font-gruppo">
 			<a href="https://github.com/<%= github %>">
 				github.com/<%= github %>
 			</a>
@@ -62,7 +62,7 @@
 			<i class="fab fa-gitlab"></i>
 			Gitlab
 		</dt>
-		<dd>
+		<dd class="font-gruppo">
 			<a href="https://gitlab.com/<%= gitlab %>">
 				gitlab.com/<%= gitlab %>
 			</a>

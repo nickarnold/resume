@@ -5,7 +5,7 @@
 </head>
 <body>
 	<header class="flex print:h-20 h-24 bg-blue-700 items-center px-6 text-gray-100">
-		<h1 class="w-screen"><%= contact.name %></h1>
+		<h1 class="w-screen font-gruppo"><%= contact.name %></h1>
 
 		<!-- donwload button for PDF -->
 		<div class="print:hidden absolute top-1 right-1">
@@ -15,8 +15,8 @@
 			</a>
 		</div>
 
-		<span class="flex justify-end text-sm font-normal w-screen">
-			<%= contact.tagline %>
+		<span class="flex justify-end text-lg font-gruppo w-screen">
+			<strong><%= contact.tagline %></strong>
 		</span>
 	</header>
 
@@ -33,7 +33,6 @@
 			<%- include('about', about); %>
 			<%- include('experience', experience); %>
 			<%- include('education', education); %>
-			<%- include('hobbies', hobbies); %>
 		</main>
 	</div>
 

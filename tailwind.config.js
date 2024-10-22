@@ -3,7 +3,8 @@ module.exports = {
   content: ["./src/**/*.{html,ejs}"],
   theme: {
     fontFamily: {
-      sans: ['"Open Sans"', "sans-serif"],
+      sans: ['"SackersGothic"', "sans-serif"],
+      gruppo: ['"Gruppo"', "sans-serif"],
     },
     extend: {
       screens: {

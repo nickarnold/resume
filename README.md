@@ -29,10 +29,11 @@ the HTML and PDF versions in sync with each other.
 3. Edit the `resume-data.yml` file to add your own information
 4. Run `npm run build` to generate the resume
 5. Commit your changes and push to your repository
-6. Go to your repository's GitHub Actions page and ensure the "Secure Copy Deployment" workflow is not disabled
+6. Go to your repository's GitHub Actions page and ensure the "Secure Copy 
+Deployment" workflow is not disabled
 7. Setup the requisite secrets in your repository's settings (see below)
-8. Trigger the workflow manually or wait for a push to the `main` or `master` branch
-9. Your resume should now be live at `<SSH_HOST>` on the path specified in `<DEPLOY_DIR>`
+8. Trigger the workflow manually or push a change to the `main`/`master` branch
+9. Your resume should be live at `<SSH_HOST>` at the path `<DEPLOY_DIR>`
 
 This assumes that you've already configured the target deployment server to for
 SSH access and have the requisite SSH keys in place (e.g. public key in target 
@@ -43,17 +44,22 @@ server's authorized_keys file and private key in this repository's secrets).
 
 This repository contains one workflow:
 
-- `deploy.yml`: This workflow is triggered on pushes to the `main` or `master` branches. It builds the resume and 
-deploys it to the server specified in the `SSH_HOST` variable (see below). 
+- `deploy.yml`: This workflow is triggered on pushes to the `main` or `master` 
+branches. It builds the resume and deploys it to the server specified in the 
+`SSH_HOST` variable (see below). 
 
 
 ### Repo Secrets
 
-The following repository secrets are required to deploy the deploy:
+The following repository secrets are used in the deploy workflow:
 
-- `SSH_USERNAME`: The username for the SSH server
-- `SSH_DEPLOY_KEY`: The private key for the SSH server
 - `DEPLOY_DIR`: The directory on the server where the resume should be deployed
+- `RESUME_DATA`: (_optional_) The YAML containing the resume data to use during
+   HTML and PDF rendering. If not provided, the default `./src/resume-data.yml`
+   data will be used.
+- `SSH_DEPLOY_KEY`: The private key for the SSH server
+- `SSH_USERNAME`: The username for the SSH server
+
 
 ### Repo Variables
 

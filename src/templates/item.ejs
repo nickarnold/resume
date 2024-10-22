@@ -1,9 +1,11 @@
-<article class="my-2">
+<article class="my-3">
 	<header class="flex items-center">
-		<span class="basis-4/5 text-lg font-semibold text-blue-600">
+		<span class="basis-5/6 text-lg font-semibold text-blue-600">
 			<%= title %> &mdash; <a href="<%= site %>"><%= company %></a>
 		</span>
-		<div class="basis-1/5 text-xs text-right text-slate-600 italic">
+		<div class="basis-1/6 text-xs text-right text-slate-600 italic">
+			
+			<% if (from || to) { %>
 			<span>
 				<%- include('monthYear', { date: from }) %>
 					&nbsp;&ndash;
@@ -14,6 +16,8 @@
 				<% } %>
 			</span>
 			<br />
+			<% } %>
+
 			<% if (locals.location && location) { %>
 			<span>
 				<i class="fa fa-map-marker-alt"></i>
@@ -25,24 +29,36 @@
 	
 	<div class="w-4/5">
 	<% if (locals.description) { %>
-		<p>
-			<strong>Accomplishments:</strong>
+		<p class="font-gruppo font-bold">
 			<%- description.replace(/\n/g, '<br>') %>
 		</p>
 	<% } %>
 
+	<% if (locals.highlights) { %>
+		<div class="mt-2">
+			<strong>Key Achievements:</strong>
+			<ul class="list-inside list-disc ml-4 font-gruppo font-bold">
+				<% for (const highlight of highlights) { %>
+					<li><%= highlight %></li>
+				<% } %>
+			</ul>
+		</div>
+	<% } %>
+
 	<% if (locals.skills) { %>
-		<p>
+		<div class="mt-2">
 			<strong>
 				<%= locals.isEducation ? 'Core courses' : 'Tech stack' %>:
 			</strong>
-			<%
-				for (const skill of skills) {
-					const isLast = skill === skills[skills.length - 1];
-			%>
-				<%= skill %><%= isLast ? '' : ',' %>
-			<% } %>
-		</p>
+			<div class="font-gruppo font-bold">
+				<%
+					for (const skill of skills) {
+						const isLast = skill === skills[skills.length - 1];
+				%>
+					<%= skill %><%= isLast ? '' : ',' %>
+				<% } %>
+			</div>
+		</div>
 	<% } %>
 	</div>
 </article>
