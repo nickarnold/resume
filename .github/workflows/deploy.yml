@@ -49,7 +49,7 @@ jobs:
           host: ${{ vars.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME}}
           key: ${{ secrets.SSH_DEPLOY_KEY }}
-          source: "output/resume.pdf,output/style.css,output/fonts/*.woff2,output/resume.html"
+          source: "output/resume.pdf,output/style.css,output/resume.html"
           target: ${{ secrets.DEPLOY_DIR }}
           # this will remove the 'output' part of the source path on the target
           strip_components: 1
