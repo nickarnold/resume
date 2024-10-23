@@ -2,7 +2,7 @@
 
 This is an HTML/PDF resume built with a templating engine and deployed to a 
 server using GitHub Actions. It uses [Tailwind CSS](https://tailwindcss.com/) 
-for styling, and [Playwright](https://playwright.dev/) for PDF generation and 
+for styling, [Playwright](https://playwright.dev/) for PDF generation and 
 EJS templating in Node.js to generate the HTML.
 
 The resume data is stored in `./src/resume-data.yml` and is rendered to HTML 
