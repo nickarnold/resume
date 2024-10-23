@@ -21,16 +21,16 @@
 		</div>
 	</header>
 
-	<div id="content" class="flex flex-row px-6 pt-6">
+	<div id="content" class="md:flex md:flex-row px-6 pt-6">
 
 		<!-- left column -->
-		<aside class="basis-1/5 space-y-6 min-w-[225px]">
+		<aside class="md:basis-1/5 space-y-6 min-w-[225px]">
 			<%- include('contact', contact); %>
 			<%- include('skills', topSkills); %>
 		</aside>
 
 		<!-- right column -->
-		<main class="basis-4/5 pl-6 min-w-[540px]">
+		<main class="md:basis-4/5 pl-6 min-w-[540px]">
 			<%- include('about', about); %>
 			<%- include('experience', experience); %>
 			<%- include('education', education); %>
