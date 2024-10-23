@@ -52,7 +52,7 @@
     /* adjust for PDF printing */
     @media print {
         html {
-            font-size: 8px;
+            font-size: 8pt;
         }
         #content a {
             @apply 
