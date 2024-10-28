@@ -4,68 +4,86 @@
 		<header class="flex-shrink mx-4 font-semibold text-blue-700 uppercase">Contact</header>
 		<div class="flex-grow border-t border-blue-700"></div>
 	</div>
-	
-	<dl class="mt-4 text-sm print:text-base">
-		<dt class="screen:hidden font-bold">
-			<i class="fa fa-map-marker-alt"></i>
-			Location
-		</dt>
-		<dd class="screen:hidden mb-3 font-gruppo">
-			<%= address.city %>, <%= address.state %>, <%= address.country %>
-		</dd>
-			
-		<dt class="font-bold">
-			<i class="fas fa-envelope"></i>
-			Email
-		</dt>
-		<dd class="mb-4 font-gruppo">
-			<a href="mailto:<%= email %>"><%= email %></a>
-		</dd>
 
-		<dt class="font-bold">
-			<i class="fas fa-mobile-alt"></i>
-			Mobile phone
-		</dt>
-		<dd class="mb-4 font-gruppo">
-			<a href="tel:<%= mobile.replace(/\s/g, '') %>"><%= mobile %></a>
-		</dd>
+	<section class="flex flex-wrap justify-center gap-4 mt-4 text-sm print:text-base">
+		<div class="screen:hidden text-center order-last">
+			<div class="font-bold">
+				<i class="fa fa-map-marker-alt"></i>
+				Location
+			</div>
+			<div class="font-gruppo">
+				<%= address.city %>, <%= address.state %>, <%= address.country %>
+			</div>
+		</div>
 
-		<dt class="font-bold">
-			<i class="fas fa-globe"></i>
-			Website
-		</dt>
-		<dd class="mb-4 font-gruppo">
-			<a href="<%= website %>"><%= website.replace('https://', '') %></a>
-		</dd>
+		<div class="text-center">
+			<div class="font-bold">
+				<i class="fas fa-envelope"></i>
+				Email
+			</div>
+			<div class="font-gruppo">
+				<a href="mailto:<%= email %>"><%= email %></a>
+			</div>
+		</div>
 
-		<dt class="font-bold">
-			<i class="fab fa-linkedin"></i>
-			LinkedIn
-		</dt>
-		<dd class="mb-4 font-gruppo">
-			<a href="https://www.linkedin.com/in/<%= linkedin %>">
-				linkedin.com/in/<%= linkedin %>
-			</a>
-		</dd>
+		<div class="text-center">
+			<div class="font-bold">
+				<i class="fas fa-mobile-alt"></i>
+				Mobile phone
+			</div>
+			<div class="font-gruppo">
+				<a href="tel:<%= mobile.replace(/\s/g, '') %>"><%= mobile %></a>
+			</div>
+		</div>
 
-		<dt class="font-bold">
-			<i class="fab fa-github"></i>
-			Github
-		</dt>
-		<dd class="mb-4 font-gruppo">
-			<a href="https://github.com/<%= github %>">
-				github.com/<%= github %>
-			</a>
-		</dd>
+		<div class="text-center">
+			<div class="font-bold">
+				<i class="fas fa-globe"></i>
+				Website
+			</div>
+			<div class="font-gruppo">
+				<a href="<%= website %>"><%= website.replace('https://', '') %></a>
+			</div>
+		</div>
 
-		<dt class="font-bold">
-			<i class="fab fa-gitlab"></i>
-			Gitlab
-		</dt>
-		<dd class="font-gruppo">
-			<a href="https://gitlab.com/<%= gitlab %>">
-				gitlab.com/<%= gitlab %>
-			</a>
-		</dd>
-	</dl>
+		<div class="text-center">
+			<div class="font-bold">
+				<i class="fab fa-linkedin"></i>
+				LinkedIn
+			</div>
+			<div class="font-gruppo">
+				<a href="https://www.linkedin.com/in/<%= linkedin %>">
+					linkedin.com/in/<%= linkedin %>
+				</a>
+			</div>
+		</div>
+
+		<% if (github) { %>
+		<div class="text-center">
+			<div class="font-bold">
+				<i class="fab fa-github"></i>
+				Github
+			</div>
+			<div class="font-gruppo">
+				<a href="https://github.com/<%= github %>">
+					github.com/<%= github %>
+				</a>
+			</div>
+		</div>
+		<% } %>
+
+		<% if (gitlab) { %>
+		<div class="text-center">
+			<div class="font-bold">
+				<i class="fab fa-gitlab"></i>
+				Gitlab
+			</div>
+			<div class="font-gruppo">
+				<a href="https://gitlab.com/<%= gitlab %>">
+					gitlab.com/<%= gitlab %>
+				</a>
+			</div>
+		</div>
+		<% } %>
+	</section>
 </section>
