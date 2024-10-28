@@ -24,11 +24,10 @@
   },
   "homepage": "https://nickarnold.name/resume",
   "devDependencies": {
-    "tailwindcss": "^3.4.11",
-    "vite": "^5.4.10"
+    "tailwindcss": "^3.4.11"
   },
   "dependencies": {
-    "date-fns": "^3.6.0",
+    "date-fns": "^4.1.0",
     "ejs": "^3.1.10",
     "playwright": "^1.47.0",
     "yaml": "^2.5.1"
