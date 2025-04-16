@@ -1,1 +1,1 @@
-<%= datefns.format(datefns.parse(date.substring(0, 7), 'yyyy-MM', new Date()), 'MMM y'); %>
+<%= (date.length === 7 ? datefns.format(datefns.parse(date.substring(0, 7), 'yyyy-MM', new Date()), 'MMM y') : date) %>
