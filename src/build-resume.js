@@ -16,13 +16,13 @@ const TEMPLATE_VALUES_FILE = `${__dirname}/resume-data.yml`;
     const scriptArgs = parseArgs({
         options: {
             html: { type: 'boolean', default: true },
-            pdf: { type: 'boolean', default: true }
+            pdf: { type: 'boolean', default: false }
         }
     });
 
     // grab the resume data from the environment or the file system, in that order
     let resumeData;
-    if (process.env.RESUME_DATA) {        
+    if (process.env.RESUME_DATA) {
         resumeData = yaml.parse(process.env.RESUME_DATA);
     } else {
         resumeData = yaml.parse(fs.readFileSync(TEMPLATE_VALUES_FILE, 'utf8'));
@@ -42,7 +42,7 @@ const TEMPLATE_VALUES_FILE = `${__dirname}/resume-data.yml`;
         fs.writeFileSync(`${OUTPUT_DIRECTORY}/resume.html`, renderedHTML);
         console.log('HTML generated successfully');
     }
-    
+
 
     // print and write out the PDF file
     if (scriptArgs.values.pdf) {

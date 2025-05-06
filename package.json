@@ -9,8 +9,8 @@
     "build": "npm run build:styles && npm run build:all",
     "build:dev": "npx tailwindcss -i ./src/style.css -o ./output/style.css --watch ; npm run build:html",
     "build:styles": "npx tailwindcss -i ./src/style.css -o ./output/style.css --minify",
-    "build:html": "node ./src/build-resume.js --html",
-    "build:all": "node ./src/build-resume.js",
+    "build:html": "node ./src/build-resume.js",
+    "build:all": "node ./src/build-resume.js --pdf",
     "clean": "rm -rf output"
   },
   "repository": {

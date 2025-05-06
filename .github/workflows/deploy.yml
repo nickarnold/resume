@@ -32,11 +32,11 @@ jobs:
           path: |
             ~/.cache/ms-playwright
           key: playwright-${{ hashFiles('package-lock.json') }}
-          
+
       - name: Install Playwright browsers w/deps
         id: install-playwright-browsers
         if: steps.cache-playwright.outputs.cache-hit != 'true'
-        run: npx playwright install --with-deps    
+        run: npx playwright install --with-deps
 
       - name: Build resume (HTML and PDF)
         if: ${{ success() }}
